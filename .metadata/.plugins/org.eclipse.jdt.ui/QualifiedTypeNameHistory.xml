@@ -1,2 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="ex01_nonDI.DAO"/>
+    <fullyQualifiedTypeName name="ex01_nonDI.OracleDAO"/>
+    <fullyQualifiedTypeName name="ex01_nonDI.Service"/>
+    <fullyQualifiedTypeName name="ex01_nonDI.MySQLDAO"/>
+    <fullyQualifiedTypeName name="ex02_DI.DAO"/>
+    <fullyQualifiedTypeName name="ex02_DI.Service"/>
+    <fullyQualifiedTypeName name="ex03_DI.MyProcess"/>
+    <fullyQualifiedTypeName name="java.util.Calendar"/>
+    <fullyQualifiedTypeName name="ex04_DI.Age"/>
+    <fullyQualifiedTypeName name="org.springframework.context.ApplicationContext"/>
+    <fullyQualifiedTypeName name="org.springframework.context.support.GenericXmlApplicationContext"/>
+    <fullyQualifiedTypeName name="ex04_DI.MyProcess"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="javax.inject.Inject"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Qualifier"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
+</qualifiedTypeNameHistroy>
