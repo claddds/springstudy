@@ -1,0 +1,6 @@
+
+7월 25, 2023 10:07:36.771 NEW SESSION
+7월 25, 2023 10:07:36.772 [10352:11856:0725/100736.770:ERROR:feature_processor_state.cc(39)] Processing error occured: model WebAppInstallationPromo failed with UkmEngineDisabled, message: 
+7월 25, 2023 10:07:36.793 [10352:11856:0725/100736.793:ERROR:feature_processor_state.cc(39)] Processing error occured: model WebAppInstallationPromo failed with UkmEngineDisabled, message: 
+7월 25, 2023 12:26:44.200 [10352:13316:0725/122644.200:ERROR:mcs_client.cc(750)] Received close command, resetting connection.
+7월 25, 2023 13:23:04.520 [10352:13316:0725/132304.519:ERROR:mcs_client.cc(750)] Received close command, resetting connection.
