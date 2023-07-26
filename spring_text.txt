@@ -1,0 +1,5 @@
+
+스프링 컨테이너: 스프링은 객체 관리 컨테이너를 제공한다. 
+	컨테이너에 객체를 담아 두고 필요할 때 컨테이너로부터 객체를 가져와 사용할 수 있도록 한다.
+BeanFactory => ApplicationContext => WebApplicationContext
+자바에서는 ApplicationContext 사용 // Web WebApplicationContext 사용
