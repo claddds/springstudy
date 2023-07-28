@@ -5,3 +5,13 @@
 7월 25, 2023 12:26:44.200 [10352:13316:0725/122644.200:ERROR:mcs_client.cc(750)] Received close command, resetting connection.
 7월 25, 2023 13:23:04.520 [10352:13316:0725/132304.519:ERROR:mcs_client.cc(750)] Received close command, resetting connection.
 7월 25, 2023 14:13:34.812 [10352:11856:0725/141334.811:ERROR:interface_endpoint_client.cc(697)] Message 1 rejected by interface blink.mojom.WidgetHost
+
+7월 28, 2023 17:10:45.540 NEW SESSION
+7월 28, 2023 17:10:45.541 [11184:10388:0728/171045.515:ERROR:interface_endpoint_client.cc(702)] Message 0 rejected by interface blink.mojom.WidgetHost
+7월 28, 2023 17:17:59.775 [11184:10388:0728/171759.775:ERROR:interface_endpoint_client.cc(702)] Message 0 rejected by interface blink.mojom.WidgetHost
+7월 28, 2023 17:25:37.853 [11184:10388:0728/172537.853:ERROR:device_event_log_impl.cc(222)] [17:25:37.853] Bluetooth: bluetooth_adapter_winrt.cc:1058 Getting Default Adapter failed.
+7월 28, 2023 17:53:19.252 [11184:7604:0728/175319.251:ERROR:cert_verify_proc_builtin.cc(701)] CertVerifyProcBuiltin for xn--h50bz7j.com failed:
+7월 28, 2023 17:53:19.252 ----- Certificate i=0 (CN=xn--h50bz7j.com) -----
+7월 28, 2023 17:53:19.253 ERROR: Time is after notAfter
+7월 28, 2023 17:53:19.253 
+7월 28, 2023 17:53:19.253 
