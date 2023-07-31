@@ -1,6 +1,9 @@
 package com.ict.test01;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.OutputStream;
+import java.net.URLEncoder;
 import java.text.SimpleDateFormat;
 
 import javax.servlet.http.HttpServletRequest;
@@ -8,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.util.FileCopyUtils;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
@@ -84,5 +88,26 @@ public class MyController2 {
 		} catch (Exception e) {
 		}
 		return null;
+	}
+	@GetMapping("/down.do")
+	public void getFileDown(HttpServletRequest request, HttpServletResponse response) {
+		String f_name= request.getParameter("f_name");
+		String path = request.getSession().getServletContext().getRealPath("/resources/images/"+f_name);
+		try {
+			String realPath = URLEncoder.encode(path,"utf-8");
+			// 브라우저 설정(첨부파일이 존재하는 것으로 변경)
+			response.setContentType("application/x-msdownload");
+			response.setHeader("Content-Disposition", "attachment; filename ="+realPath);
+			
+			// 실제 저장
+			File file = new File(new String(path.getBytes()));
+			FileInputStream in = new FileInputStream(file);
+			OutputStream out = response.getOutputStream();
+			
+			// 파일 복사(upload)
+			FileCopyUtils.copy(in, out);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
 	}
 }
