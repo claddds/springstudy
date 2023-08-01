@@ -8,24 +8,42 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.ict.model.service.GuestbookService;
-import com.ict.model.vo.GuestbookVO;
+import com.ict.model.service.GuestBookService;
+import com.ict.model.vo.GuestBookVO;
 
 
 
 @Controller
 public class GuestbookController {
+	// 일처리가 있으면 서비스로 가자
 	@Autowired
-	private GuestbookService guestbookService;
-	
+	private GuestBookService guestBookService;
+
+	public GuestBookService getGuestBookService() {
+		return guestBookService;
+	}
+
+	public void setGuestBookService(GuestBookService guestBookService) {
+		this.guestBookService = guestBookService;
+	}
+
 	@GetMapping("/guestbook_list.do")
 	public ModelAndView getguestbookList() {
 		ModelAndView mv = new ModelAndView("guestbook/list");
-		List<GuestbookVO> list = guestbookService.guestbookList();
-		mv.addObject("list",list);
+		List<GuestBookVO> glist = guestBookService.getGuestBookList();
+		mv.addObject("glist", glist);
 		return mv;
 	}
 	
+	@GetMapping("/guestbookAddForm.do")
+	public ModelAndView getGuestBookAddForm(){
+		return new ModelAndView("guestbook/write");
+	}
 	
-	
+	@PostMapping("/guestbook_writeOK.do")
+	public ModelAndView getGuestBookInsert(GuestBookVO gvo) {
+		ModelAndView mv = new ModelAndView("redirect:/guestbook_list.do");
+		int result = guestBookService.getGuestBookInsert(gvo);
+		return mv;
+	}
 }

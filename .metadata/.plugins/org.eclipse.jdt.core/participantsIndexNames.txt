@@ -19,6 +19,8 @@ D:\rhj\springstudy\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1273975
 \Spring_DI\src\main\java
 D:\rhj\springstudy\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2680307458.index
 \Spring_DI\src\main\java
+D:\rhj\springstudy\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4214650273.index
+\spring_mvc04_db\src\main\java
 D:\rhj\springstudy\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3122147881.index
 \spring_mvc01\src\main\java
 D:\rhj\springstudy\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2736559374.index

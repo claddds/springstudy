@@ -4,15 +4,20 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>방명록</title>
+<title> 방 명 록 </title>
+<link rel="stylesheet" href="resources/css/summernote-lite.css">
 <style type="text/css">
-	table{width: 600px; border-collapse:collapse; text-align: center;}
+	a {text-decoration: none;}
+	table{width:800px; border-collapse:collapse; text-align: center;}
 	table,th,td{border: 1px solid black; padding: 3px}
-	div{width: 600px; margin:auto; text-align: center;}
+	div{width:800px; margin:auto; text-align: center;}
+	.note-btn-group{width: auto;}
+	.note-toolbar{width: auto;}
 </style>
+
 <script type="text/javascript">
 	function save_go(f) {
-		f.action = "/guestbook_addGuest.do"
+		f.action="/guestbook_writeOK.do";
 		f.submit();
 	}
 </script>
@@ -21,6 +26,7 @@
 	<div>
 		<h2>방명록 : 작성화면</h2>
 		<hr />
+		<p>[<a href="/guestbook_list.do">목록으로 이동</a>]</p>
 		<form method="post">
 			<table>
 				<tr align="center">
@@ -41,7 +47,7 @@
 				</tr>
 				<tr align="center">
 					<td colspan="2">
-						<textarea rows="10" cols="60" name="content"></textarea>
+						<textarea rows="10" cols="60" name="content" id="content"></textarea>
 					</td>
 				</tr>
 				<tfoot>
@@ -56,5 +62,42 @@
 			</table>
 		</form>
 	</div>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+    	<script src="resources/js/summernote-lite.js"></script>
+    	<script src="resources/js/lang/summernote-ko-KR.js"></script>
+    	<script type="text/javascript">
+    	$(function(){
+    		$('#content').summernote({
+    			lang : 'ko-KR',
+    			height : 300,
+    			focus : true,
+    			callbacks : {
+    				onImageUpload :  function(files, editor){
+    					for (var i = 0; i < files.length; i++) {
+							sendImage(files[i], editor);
+						}
+    				}
+    			}
+			});
+    		$("#content").summernote("lineHeight",.7);
+    	});
+    	function sendImage(file, editor) {
+			var frm = new FormData();
+			frm.append("s_file",file);
+			$.ajax({
+				url : "/saveImage.do",
+				data : frm,
+				type : "post",
+				contentType : false,
+				processData : false,
+				dataType : "json",
+			}).done(function(data) {
+				var path = data.path;
+				var fname = data.fname;
+				$("#content").summernote("editor.insertImage",path+"/"+fname);
+			});
+		}
+    	
+    	</script>
 </body>
 </html>
