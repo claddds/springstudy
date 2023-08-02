@@ -27,3 +27,17 @@
 7월 31, 2023 17:31:03.600 ERROR: Time is after notAfter
 7월 31, 2023 17:31:03.600 
 7월 31, 2023 17:31:03.600 
+
+8월 02, 2023 12:46:24.203 NEW SESSION
+8월 02, 2023 12:46:24.203 [11636:13268:0802/124624.189:ERROR:connection_factory_impl.cc(471)] ConnectionHandler failed with net error: -2
+8월 02, 2023 14:05:32.00 [11636:13268:0802/140532.000:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+8월 02, 2023 14:05:35.704 [11636:13076:0802/140532.000:ERROR:get_updates_processor.cc(265)] PostClientToServerMessage() failed during GetUpdates with error 2
+8월 02, 2023 14:05:36.02 [11636:11644:0802/140536.002:ERROR:device_event_log_impl.cc(222)] [14:05:36.003] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+8월 02, 2023 14:52:28.679 [11636:13268:0802/145228.679:ERROR:connection_factory_impl.cc(471)] ConnectionHandler failed with net error: -2
+8월 02, 2023 15:01:12.639 [11636:13268:0802/150108.907:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+8월 02, 2023 15:52:17.718 [11636:13268:0802/155217.718:ERROR:connection_factory_impl.cc(471)] ConnectionHandler failed with net error: -2
+8월 02, 2023 16:45:05.757 [11636:13268:0802/164505.757:ERROR:connection_factory_impl.cc(471)] ConnectionHandler failed with net error: -2
+8월 02, 2023 16:59:30.680 [11636:13268:0802/165926.675:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+8월 02, 2023 17:00:29.253 [11636:11644:0802/170029.253:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
+8월 02, 2023 18:04:30.412 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+8월 02, 2023 18:21:56.314 [11636:11644:0802/182156.314:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
