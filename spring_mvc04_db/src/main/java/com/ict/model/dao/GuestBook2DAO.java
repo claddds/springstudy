@@ -16,17 +16,17 @@ public class GuestBook2DAO {
 
 	// 서비스에서 DB처리하는 메서드를 모두 받아 줘야 한다.
 	// Guestbook 리스트
-	public List<GuestBook2VO> getGuestBookList(){
+	public List<GuestBook2VO> getGuestBook2List(){
 		return sqlSessionTemplate.selectList("guestbook2.list");
 	}
 	
-	// 삽입
-	public int getGuestBookInsert(GuestBook2VO gvo) {
-		return sqlSessionTemplate.insert("guestbook2.insert",gvo);
+	// 글쓰기
+	public int getGuestBook2Insert(GuestBook2VO g2vo) {
+		return sqlSessionTemplate.insert("guestbook2.insert",g2vo);
 	}
 	
 	// 상세보기
-	public GuestBook2VO getGuestBookOneList(String idx) {
+	public GuestBook2VO getGuestBook2OneList(String idx) {
 		return sqlSessionTemplate.selectOne("guestbook2.onelist", idx);
 	}
 	
@@ -36,7 +36,7 @@ public class GuestBook2DAO {
 	}
 	
 	// 수정
-	public int getGuestBookUpdate(GuestBook2VO gvo) {
-		return sqlSessionTemplate.update("guestbook2.update", gvo);
+	public int getGuestBook2Update(GuestBook2VO g2vo) {
+		return sqlSessionTemplate.update("guestbook2.update", g2vo);
 	}
 }

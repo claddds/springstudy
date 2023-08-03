@@ -34,15 +34,15 @@
 			</thead>
 			<tbody>
 				<c:choose>
-					<c:when test="${empty glist2}">
+					<c:when test="${empty list}">
 						<tr><td colspan="4"><h2>원하는 정보가 존재하지 않습니다.</h2></td></tr>
 					</c:when>
 					<c:otherwise>
-						<c:forEach var="k" items="${glist2}" varStatus="vs">
+						<c:forEach var="k" items="${list}" varStatus="vs">
 						   <tr>
 						       <td>${vs.count}</td> 
 						       <td>${k.name}</td> 
-						       <td><a href="/guestbook2_oneList.do?idx=${k.idx}"> ${k.subject} </a></td> 
+						       <td><a href="/guestbook2_onelist.do?idx=${k.idx}"> ${k.subject} </a></td> 
 						       <td>${k.regdate.substring(0,10)}</td>
 						   </tr>
 						</c:forEach>

@@ -15,32 +15,32 @@ public class GuestBook2ServiceImpl implements GuestBook2Service{
 	private GuestBook2DAO guestBook2DAO;
 
 	@Override
-	public List<GuestBook2VO> getGuestBookList() {
+	public List<GuestBook2VO> getGuestBook2List() {
+		return guestBook2DAO.getGuestBook2List();
+	}
+
+	@Override
+	public int getGuestBook2Insert(GuestBook2VO g2vo) {
+		return guestBook2DAO.getGuestBook2Insert(g2vo);
+	}
+
+	@Override
+	public GuestBook2VO getGuestBook2OneList(String idx) {
 		// TODO Auto-generated method stub
-		return guestBook2DAO.getGuestBookList();
+		return guestBook2DAO.getGuestBook2OneList(idx);
 	}
 
 	@Override
-	public GuestBook2VO getGuestBookOneList(String idx) {
-		return guestBook2DAO.getGuestBookOneList(idx);
-	}
-
-	@Override
-	public int getGuestBookInsert(GuestBook2VO gvo2) {
+	public int getGuestBook2Delete(String idx) {
 		// TODO Auto-generated method stub
-		return guestBook2DAO.getGuestBookInsert(gvo2);
+		return 0;
 	}
 
 	@Override
-	public int getGuestBookUpdate(GuestBook2VO gvo2) {
-		// TODO Auto-generated method stub
-		return guestBook2DAO.getGuestBookUpdate(gvo2);
+	public int getGuestBook2Update(GuestBook2VO g2vo) {
+		
+		return guestBook2DAO.getGuestBook2Update(g2vo);
 	}
-
-	@Override
-	public int getGuestBookDelete(String idx) {
-		return guestBook2DAO.getGuestBookDelete(idx);
-	}
-
+	
 	
 }

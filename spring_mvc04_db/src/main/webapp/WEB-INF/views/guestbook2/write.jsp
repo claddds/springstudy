@@ -17,7 +17,7 @@
 
 <script type="text/javascript">
 	function save_go(f) {
-		f.action="/guestbook2_writeOK.do";
+		f.action="/guestbook2_insert.do";
 		f.submit();
 	}
 </script>
@@ -27,7 +27,9 @@
 		<h2>방명록 : 작성화면</h2>
 		<hr />
 		<p>[<a href="/guestbook2_list.do">목록으로 이동</a>]</p>
-		<form method="post">
+		
+		
+		<form method="post" enctype="multipart/form-data">
 			<table>
 				<tr align="center">
 					<td bgcolor="#99ccff">작성자</td>
@@ -47,7 +49,7 @@
 				</tr>
 				<tr align="center">
 					<td bgcolor="#99ccff">첨부파일</td>
-					<td><input type="file" name="f_name" size ="20" multiple="multiple"/></td>
+					<td><input type="file" name="file" size ="20"/></td>
 				</tr>
 				<tr align="center">
 					<td colspan="2">
@@ -101,7 +103,6 @@
 				$("#content").summernote("editor.insertImage",path+"/"+fname);
 			});
 		}
-    	
     	</script>
 </body>
 </html>
