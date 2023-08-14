@@ -32,7 +32,8 @@
 			f.m_id.focus();
 			return;
 		}
-		f.action = "/members_addMember.do"
+		// f.action = "/members_addMember.do"
+		f.action = "/member_add.do"
 		f.submit();
 	}
 </script>
@@ -66,5 +67,34 @@
 			</table>
 		</form>
 	</div>
+	<!-- 
+	<div>
+		<form method="post" action="/members_addMember.do">
+			<table>
+				<tbody>
+					<tr>
+						<th>아이디**</th>
+						<td><input type="text" name="m_id" required></td>
+					</tr>
+					<tr>
+						<th>패스워드**</th>
+						<td><input type="password" name="m_pw" required></td>
+					</tr>
+					<tr>
+						<th>이름**</th>
+						<td><input type="text" name="m_name" required></td>
+					</tr>
+					<tr>
+						<th>나이</th>
+						<td><input type="number" name="m_age"></td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr><td colspan="2"><input type="submit" value="회원가입"></td></tr>
+				</tfoot>
+			</table>
+		</form>
+	</div>
+	 --> 
 </body>
 </html>

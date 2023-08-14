@@ -21,7 +21,7 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<context:component-scan base-package="com.ict.controller" />
+<!-- 	<context:component-scan base-package="com.ict.controller" /> -->
 	
 	<!-- 파일 업로드용 클래스 등록 -->
 	<!-- 10*1024*1024 = 10MB -->
@@ -36,6 +36,9 @@
 		<interceptor>
 			<mapping path="/bbs_list.do"/>
 			<mapping path="/board_insertForm.do"/>
+			<mapping path="/shop_showCart.do"/>
+			<mapping path="/shop_addCart.do"/>
+			
 			<beans:ref bean="log_inter"/>
 		</interceptor>
 	</interceptors>
